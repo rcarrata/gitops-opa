@@ -8,7 +8,7 @@ spec:
     server: https://kubernetes.default.svc
   project: opa-config-project
   source:
-    path: manifests/auth-htpass/base
+    path: manifests/labels/base
     repoURL: https://github.com/rcarrata/k8s-opa
     targetRevision: main
   syncPolicy:
