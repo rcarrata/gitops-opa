@@ -8,4 +8,4 @@ resources:
   - k8slabels-consttmpl.yaml
   - k8slabels-ns.yaml
   - k8slabels-violations.yaml
-  - k8slabels-gatekeeper.yaml
+  - k8slabels-admission.yaml
