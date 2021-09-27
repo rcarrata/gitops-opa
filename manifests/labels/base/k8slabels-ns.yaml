@@ -10,5 +10,7 @@ spec:
     namespaces:
       - e2etestsuccess
       - e2etestfail
+      - test-opa
+      - test-opa-fail
   parameters:
     labels: ["gatekeeper"]
