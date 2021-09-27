@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: acm-lab-deploy
+  name: opa-config-project
 spec:
   clusterResourceWhitelist:
   - group: '*'

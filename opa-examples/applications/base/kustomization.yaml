@@ -3,6 +3,3 @@ kind: Kustomization
 
 resources:
 - htpass-auth.yaml
-- rbac.yaml
-- sealed-secrets.yaml
-- rhacm-operator.yaml
