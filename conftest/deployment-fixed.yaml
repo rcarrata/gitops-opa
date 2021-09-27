@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: opa-test
+    version: 1
+    release: 1
+  name: opa-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opa-test
+      release: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: opa-test
+        release: 1
+    spec:
+      securityContext:
+        runAsNonRoot: True
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+        securityContext:
+          runAsNonRoot: True
+status: {}

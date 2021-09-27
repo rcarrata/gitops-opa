@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    pepe: true
+  name: opa-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pepe: true
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        pepe: test
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
