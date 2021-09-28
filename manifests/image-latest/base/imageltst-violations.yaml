@@ -1,0 +1,6 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: ContainerImageLatest
+metadata:
+  name: containerimagelatest
+status:
+  totalViolations: 0

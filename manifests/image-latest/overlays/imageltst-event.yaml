@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Event
+metadata:
+  namespace: openshift-gatekeeper-system # set it to the actual namespace where gatekeeper is running if different
+  annotations:
+    constraint_action: deny
+    constraint_kind: ContainerImageLatest
+    constraint_name: containerimagelatest
+    event_type: violation

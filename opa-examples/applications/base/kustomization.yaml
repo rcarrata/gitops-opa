@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - opa-labels.yaml
+- opa-image-latest.yaml
