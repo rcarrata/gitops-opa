@@ -1,7 +1,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: ContainerImageLatest
 metadata:
-  name: containerimagelatest
+  name: containerimagelatest-obj
 spec:
   match:
     kinds:
