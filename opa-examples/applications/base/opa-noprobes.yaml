@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opa-probes
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: opa-config-project
+  source:
+    path: manifests/k8srequireprobes/base
+    repoURL: https://github.com/rcarrata/k8s-opa
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  sync:
+    comparedTo:
+      destination:
+        namespace: openshift-gitops
+        server: https://kubernetes.default.svc
+      source:
+        path: manifests/k8srequireprobes/base
+        repoURL: https://github.com/rcarrata/k8s-opa
+        targetRevision: main

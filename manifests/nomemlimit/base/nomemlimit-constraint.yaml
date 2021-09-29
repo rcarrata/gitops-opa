@@ -1,0 +1,22 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: ContainerResourcesLimitsMemoryNotset
+metadata:
+  name: containerresourceslimitsmemorynotset
+spec:
+  match:
+    kinds:
+    - apiGroups:
+      - apps.openshift.io
+      - apps
+      - ""
+      - batch
+      kinds:
+      - DeploymentConfig
+      - DaemonSet
+      - Deployment
+      - Job
+      - ReplicaSet
+      - ReplicationController
+      - StatefulSet
+      - Pod
+      - CronJob

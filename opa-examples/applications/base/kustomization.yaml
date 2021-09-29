@@ -5,3 +5,5 @@ resources:
 - opa-labels.yaml
 - opa-image-latest.yaml
 - opa-noliveness.yaml
+- opa-noprobes.yaml
+

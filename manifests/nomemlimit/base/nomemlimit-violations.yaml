@@ -1,0 +1,6 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: ContainerResourcesLimitsMemoryNotset
+metadata:
+  name: containerresourceslimitsmemorynotset-violation
+status:
+  totalViolations: 0
