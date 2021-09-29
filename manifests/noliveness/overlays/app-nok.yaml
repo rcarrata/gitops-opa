@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app-noreadiness
+  name: app-noreadiness
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-noreadiness
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: app-noreadiness
+    spec:
+      containers:
+      - image: quay.io/redhat-cop/openshift-applier:v2.1.2
+        name: openshift-applier
+        resources: {}
+status: {}

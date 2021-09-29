@@ -1,0 +1,15 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: ContainerLivenessprobeNotset
+metadata:
+  name: containerlivenessprobenotset
+spec:
+  match:
+    kinds:
+      - apiGroups:
+          - apps.openshift.io
+          - apps
+        kinds:
+          - DeploymentConfig
+          - DaemonSet
+          - Deployment
+          - StatefulSet

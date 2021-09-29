@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app-image-latest
+  name: app-image-latest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-image-latest
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: app-image-latest
+    spec:
+      containers:
+      - image: quay.io/redhat-cop/openshift-applier:latest
+        name: openshift-applier
+        resources: {}
+status: {}

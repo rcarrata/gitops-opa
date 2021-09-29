@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gatekeeper-operator
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: manifests/gatekeeper-operator/overlays/upstream
+    repoURL: https://github.com/rcarrata/k8s-opa
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  sync:
+    comparedTo:
+      destination:
+        namespace: openshift-gitops
+        server: https://kubernetes.default.svc
+      source:
+        path: manifests/gatekeeper-operator/overlays/upstream
+        repoURL: https://github.com/rcarrata/k8s-opa
+        targetRevision: main

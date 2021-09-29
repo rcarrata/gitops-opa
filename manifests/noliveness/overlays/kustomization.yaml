@@ -4,7 +4,8 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
-resources:
-  - imageltst-template.yaml
-  - imageltst-constraint.yaml
-  - imageltst-violations.yaml
+bases:
+  - ../base/
+
+#resources:
+#  - k8slabels-event.yaml
